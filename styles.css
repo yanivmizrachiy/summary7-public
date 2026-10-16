@@ -9,7 +9,7 @@ nav.quick a:hover{background:#e3edf5;transform:translateY(-1px)}
 section{margin-top:45px;scroll-margin-top:18px}
 section h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.025em;margin:0 0 22px;color:var(--navy);display:flex;align-items:center;gap:14px}
 section h2:before{content:"";display:inline-block;flex:none;width:4px;height:28px;border-radius:4px;background:var(--gold)}
-.cards a,.panel{background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 4px 18px #19345109;padding:20px 22px;transition:box-shadow .2s,transform .2s,border-color .2s}
+.panel{background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 4px 18px #19345109;padding:20px 22px;transition:box-shadow .2s,transform .2s,border-color .2s}
 .panel{font-weight:500}
 .panel b{display:inline-block;margin-top:10px;font-size:13px;letter-spacing:.015em;color:#2b628b;background:#eef4f8;border-radius:5px;padding:2px 9px}
 #moodle ul{padding-inline-start:22px}
@@ -27,12 +27,12 @@ footer{color:#647b8c!important}
 @media(max-width:700px){main{padding:0 19px 38px;box-shadow:none}
 nav.quick{gap:7px}nav.quick a{font-size:12px;padding:7px 10px}
 section{margin-top:36px}.grades{grid-template-columns:1fr}
-.cards a,.panel{padding:17px}}
+.panel{padding:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 @page{size:A4;margin:14mm}
 @media print{html{scroll-behavior:auto}body{background:#fff!important;color:#000;font:11pt/1.45 Arial,sans-serif}main{max-width:none;padding:0;box-shadow:none}
 nav.quick{display:none!important}section{margin-top:8mm;break-inside:auto}section h2{font-size:17pt;break-after:avoid}
-.cards a,.panel{box-shadow:none!important;background:#fff!important;border:1px solid #a9b7c3;break-inside:avoid;padding:10px}#moodle{background:#fff;padding:10px;break-inside:avoid}.grades{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.grades .panel{padding:10px}.grades h3{font-size:14pt}.grades h4{margin-top:8px}a{color:#173e5f!important;text-decoration:underline}footer{margin-top:10mm}}
+.panel{box-shadow:none!important;background:#fff!important;border:1px solid #a9b7c3;break-inside:avoid;padding:10px}#moodle{background:#fff;padding:10px;break-inside:avoid}.grades{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.grades .panel{padding:10px}.grades h3{font-size:14pt}.grades h4{margin-top:8px}a{color:#173e5f!important;text-decoration:underline}footer{margin-top:10mm}}
 
 /* Per-topic section colors (luxurious, harmonious with navy/gold; AA-safe on dark ink) + full phone fit — Claude Code 2026-10-16 */
 #courses,#news,#calendar,#moodle,#workbooks{margin-top:30px;padding:28px clamp(18px,3.5vw,34px) 32px;border-radius:18px;border:1px solid transparent;box-shadow:0 6px 24px #18334d0a;position:relative;overflow:hidden}
