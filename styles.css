@@ -13,7 +13,6 @@ section h2:before{content:"";display:inline-block;flex:none;width:4px;height:28p
 .panel{font-weight:500}
 .panel b{display:inline-block;margin-top:10px;font-size:13px;letter-spacing:.015em;color:#2b628b;background:#eef4f8;border-radius:5px;padding:2px 9px}
 #moodle ul{padding-inline-start:22px}
-#moodle{padding:27px 30px 30px;background:#f5f8fb;border:1px solid #e2eaf0;border-radius:16px}
 #moodle h2{margin-bottom:12px}
 #moodle p{margin:9px 0}
 #moodle li{margin:12px 0}
@@ -27,13 +26,12 @@ footer{color:#647b8c!important}
 :focus-visible{outline:3px solid #c59d56!important;outline-offset:3px}
 @media(max-width:700px){main{padding:0 19px 38px;box-shadow:none}
 nav.quick{gap:7px}nav.quick a{font-size:12px;padding:7px 10px}
-section{margin-top:36px}#moodle{padding:18px}.grades{grid-template-columns:1fr}
+section{margin-top:36px}.grades{grid-template-columns:1fr}
 .cards a,.panel{padding:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 @page{size:A4;margin:14mm}
 @media print{html{scroll-behavior:auto}body{background:#fff!important;color:#000;font:11pt/1.45 Arial,sans-serif}main{max-width:none;padding:0;box-shadow:none}
-header:before,header:after{display:none}
-header p,header small{color:#102d47!important}nav.quick,.actions{display:none!important}section{margin-top:8mm;break-inside:auto}section h2{font-size:17pt;break-after:avoid}
+nav.quick{display:none!important}section{margin-top:8mm;break-inside:auto}section h2{font-size:17pt;break-after:avoid}
 .cards a,.panel{box-shadow:none!important;background:#fff!important;border:1px solid #a9b7c3;break-inside:avoid;padding:10px}#moodle{background:#fff;padding:10px;break-inside:avoid}.grades{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.grades .panel{padding:10px}.grades h3{font-size:14pt}.grades h4{margin-top:8px}a{color:#173e5f!important;text-decoration:underline}footer{margin-top:10mm}}
 
 /* Per-topic section colors (luxurious, harmonious with navy/gold; AA-safe on dark ink) + full phone fit — Claude Code 2026-10-16 */
@@ -49,7 +47,7 @@ header p,header small{color:#102d47!important}nav.quick,.actions{display:none!im
 @media(max-width:700px){#courses,#news,#calendar,#moodle,#workbooks,#teaching{margin-top:22px;padding:19px 16px 21px;border-radius:14px}main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right));padding-bottom:max(38px,env(safe-area-inset-bottom))}
 nav.quick a{padding:10px 14px}
 }
-@media(max-width:360px){header h1{font-size:38px}main{padding-left:max(11px,env(safe-area-inset-left));padding-right:max(11px,env(safe-area-inset-right))}#courses,#news,#calendar,#moodle,#workbooks,#teaching{padding:16px 13px 18px}}
+@media(max-width:360px){main{padding-left:max(11px,env(safe-area-inset-left));padding-right:max(11px,env(safe-area-inset-right))}#courses,#news,#calendar,#moodle,#workbooks,#teaching{padding:16px 13px 18px}}
 @media print{#courses,#news,#calendar,#moodle,#workbooks,#teaching{background:#fff!important;border:0;box-shadow:none;padding:0;margin-top:18px}#courses:before,#news:before,#calendar:before,#moodle:before,#workbooks:before,#teaching:before{display:none}}
 /* "מה צפוי" as a refined table with delicate borders */
 .cal-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
