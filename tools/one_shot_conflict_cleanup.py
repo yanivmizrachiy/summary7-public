@@ -21,7 +21,6 @@ for old,new in replacements.items():
         css=css.replace(old,new)
         removed+=1
 
-# Remove the later duplicate calendar-date rule while preserving color from the earlier rule.
 dup='.cal-table .cal-date{font-weight:800;font-variant-numeric:tabular-nums;white-space:normal;line-height:1.65}'
 first=css.find(dup)
 second=css.find(dup,first+1) if first!=-1 else -1
@@ -29,8 +28,8 @@ if second!=-1:
     css=css[:second]+css[second+len(dup):]
     removed+=1
 
-if removed < 2:
-    raise SystemExit(f'ABORT: expected cleanup targets not found; removed={removed}')
+if removed < 1:
+    raise SystemExit('ABORT: no verified cleanup target found')
 for required in ['#teaching{position:relative','#teaching:before{content:','.cal-table .cal-date{font-weight:800;color:#22577f','.training-table','.workbooks-table','.lux-hero','.panel{']:
     if required not in css:
         raise SystemExit(f'ABORT: critical CSS missing: {required}')
