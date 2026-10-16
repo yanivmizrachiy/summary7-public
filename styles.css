@@ -76,3 +76,12 @@ h3{color:#214f76}.lead{font-size:clamp(1rem,2.2vw,1.17rem);line-height:1.85;colo
 .grade-9-three .grade-sheet h3,.grade-9-three .grade-sheet h4{color:#21745a}
 @media(max-width:720px){.teaching-head{padding:16px 17px 8px!important}.teaching-head h2{margin-bottom:8px}.grade-page{min-height:0;border-radius:0}.grade-page-inner{padding:18px 14px 24px!important}.grade-sheet{padding:20px 18px;border-radius:20px;box-shadow:0 10px 26px rgba(30,45,70,.08)}.grade-sheet h3{font-size:2.35rem;margin-bottom:14px}.grade-sheet h4{margin-top:17px}.grade-sheet li,.grade-sheet p{font-size:1rem;line-height:1.65}}
 @media print{.teaching-intro{display:none}.grade-page{min-height:297mm;page-break-after:always}.grade-page-inner{padding:14mm!important}.grade-sheet{box-shadow:none}}
+
+
+/* force-top-alignment-2026-10-16 */
+.sheet:not(.cover){display:block!important;align-items:start!important;justify-content:start!important}
+.sheet:not(.cover)>.sheet-inner{padding-top:14px!important}
+.sheet:not(.cover)>.sheet-inner.wide{padding-top:14px!important}
+.closing-page{display:block!important;text-align:right!important;min-height:0!important}
+.closing-inner{padding-top:14px!important;justify-items:start!important;text-align:right!important}
+@media(max-width:720px){.sheet:not(.cover)>.sheet-inner,.sheet:not(.cover)>.sheet-inner.wide{padding-top:10px!important}.grade-page-inner{padding-top:10px!important}.teaching-head{padding-top:10px!important}.closing-inner{padding-top:10px!important}}
