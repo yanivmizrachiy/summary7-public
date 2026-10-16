@@ -1,0 +1,17 @@
+name: One-shot CSS conflict cleanup
+on:
+  push:
+    paths:
+      - 'tools/one_shot_conflict_cleanup.py'
+      - '.github/workflows/one-shot-conflict-cleanup.yml'
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/one_shot_conflict_cleanup.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add styles.css
+          git diff --cached --quiet || (git commit -m "Resolve CSS conflicts" && git push)
