@@ -85,3 +85,18 @@ h3{color:#214f76}.lead{font-size:clamp(1rem,2.2vw,1.17rem);line-height:1.85;colo
 .closing-page{display:block!important;text-align:right!important;min-height:0!important}
 .closing-inner{padding-top:14px!important;justify-items:start!important;text-align:right!important}
 @media(max-width:720px){.sheet:not(.cover)>.sheet-inner,.sheet:not(.cover)>.sheet-inner.wide{padding-top:10px!important}.grade-page-inner{padding-top:10px!important}.teaching-head{padding-top:10px!important}.closing-inner{padding-top:10px!important}}
+
+
+/* summary7-content-polish-2026-10-16 */
+.cover-inner{min-height:92svh;align-content:center}
+.date-row{position:absolute;top:28px;inset-inline:28px;width:auto}
+.event-register-note{margin:8px 0 10px;color:#5e7180;line-height:1.55}
+.event-register-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 14px;border-radius:999px;background:linear-gradient(135deg,var(--blue),#2787c9);color:#fff;text-decoration:none;font-weight:800}
+.whatsapp-story{border:1px solid rgba(36,170,92,.28);background:linear-gradient(145deg,#f4fff7,#fff 58%,#eefbf2);box-shadow:0 16px 36px rgba(31,126,72,.10)}
+.whatsapp-story:before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:5px;background:linear-gradient(#25d366,#128c7e)}
+.whatsapp-label{display:inline-flex;align-items:center;min-height:32px;padding:6px 11px;margin-bottom:10px;border-radius:999px;background:#e7f9ed;color:#167446;font:800 .78rem/1.2 "Rubik",Arial,sans-serif}
+.science-story h3{color:#17613d;font-size:clamp(1.45rem,3vw,2rem)}
+.science-story p{color:#3f6250}
+.science-register{background:linear-gradient(135deg,#128c7e,#25d366)!important;box-shadow:0 10px 22px rgba(18,140,126,.22)!important}
+@media(max-width:720px){.cover-inner{min-height:100svh;padding-top:76px}.date-row{top:18px;inset-inline:17px}.event-register-link,.science-register{width:100%}.whatsapp-story{padding:18px!important}}
+@media print{.grade-page{break-before:page;break-after:page;min-height:297mm}.date-row{position:static;width:100%}.cover-inner{min-height:0}}
