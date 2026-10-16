@@ -1,0 +1,32 @@
+name: one-shot split teaching pages
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/one_shot_split_teaching_pages.py'
+      - '.github/workflows/one-shot-split-teaching-pages.yml'
+permissions:
+  contents: write
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Split teaching pages and tighten top spacing
+        run: python tools/one_shot_split_teaching_pages.py
+      - name: Commit result
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "Yaniv Raz"
+          git config user.email "yanivmiz77@gmail.com"
+          git add index.html styles.css
+          git commit -m "Split teaching grades into separate mobile-first sections"
+          git push origin HEAD:main
