@@ -625,9 +625,9 @@ html.dlg-open{overflow:hidden}
 .closing-logo{width:min(30vw,110px);border-radius:50%;box-shadow:0 0 0 6px #fff,0 0 0 7px var(--gold),0 20px 40px -20px rgba(18,23,52,.35)}
 .closing-page h2{font-size:clamp(40px,12vw,64px);margin-bottom:0;color:var(--ink)}
 .closing-page h2::after{margin-inline:auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);width:120px;height:1.5px}
-.closing-page p{font-size:16.5px;line-height:1.9;color:var(--muted)}
-.closing-page p strong{font-family:var(--f-display);font-size:22px;color:var(--ink)}
-.signature{width:min(60vw,240px);opacity:.95}
+.closing-sign{font-size:14px;line-height:1.7;color:var(--muted);letter-spacing:.01em}
+.closing-sign strong{font-weight:700;color:var(--text)}
+.signature{width:min(34vw,130px);opacity:.85;margin-top:-6px}
 
 /* ============================================================
    Reveal on scroll (resting state is visible; JS only adds motion)
