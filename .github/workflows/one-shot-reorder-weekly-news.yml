@@ -1,0 +1,38 @@
+name: one-shot reorder weekly news
+on:
+  push:
+    paths:
+      - 'tools/one_shot_reorder_weekly_news.py'
+      - '.github/workflows/one-shot-reorder-weekly-news.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reorder weekly news
+        run: python tools/one_shot_reorder_weekly_news.py
+      - name: Rename grade 9 tracks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('שכבת ט׳ — 4–5 יח״ל','שכבת ט׳ — רגילה')
+          s=s.replace('שכבת ט׳ — 3 יח״ל','שכבת ט׳ — מצומצמת')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit result
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "Yaniv Raz"
+          git config user.email "yanivmiz77@gmail.com"
+          git add index.html
+          git commit -m "Reorder weekly news and rename grade 9 tracks"
+          git push origin HEAD:main
