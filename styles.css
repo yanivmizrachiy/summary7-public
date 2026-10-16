@@ -138,3 +138,30 @@ a,p,span,strong,h1,h2,h3,h4,li,td,th{overflow-wrap:anywhere;word-break:break-wor
 @media(max-width:720px){.courses-page-part{overflow:visible!important;min-height:auto!important}.courses-page-part .training-table td{grid-template-columns:minmax(0,34%) minmax(0,1fr)!important}}
 @media(max-width:390px){.courses-page-part .training-table td{grid-template-columns:1fr!important}}
 @media print{.courses-page-part{break-after:page;page-break-after:always;overflow:visible!important}}
+
+
+/* true-training-table-final */
+.true-table-page{overflow:hidden}
+.true-training-table{display:table!important;width:100%!important;table-layout:fixed!important;border-collapse:separate!important;border-spacing:0!important}
+.true-training-table thead{display:table-header-group!important;position:static!important;width:auto!important;height:auto!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important}
+.true-training-table tbody{display:table-row-group!important}
+.true-training-table tr{display:table-row!important;width:auto!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important}
+.true-training-table th,.true-training-table td{display:table-cell!important;width:auto!important;min-width:0!important;max-width:none!important;padding:8px 7px!important;border-bottom:1px solid #f0e5e8!important;border-inline-start:1px solid #f3ecee!important;vertical-align:top!important;text-align:right!important;line-height:1.45!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+.true-training-table td:before{content:none!important;display:none!important}
+.true-training-table thead th{background:linear-gradient(135deg,#a61d3b,#c83f59)!important;color:#fff!important}
+.true-training-table tbody tr:nth-child(even){background:#fff9fa!important}
+.true-training-table .verification-row{background:#fff5d9!important}
+@media(max-width:720px){
+  .true-table-page .sheet-inner{padding:18px 8px!important}
+  .true-table-page h2{font-size:1.7rem!important;margin-bottom:10px!important}
+  .true-training-table{font-size:.63rem!important}
+  .true-training-table th,.true-training-table td{padding:6px 4px!important;line-height:1.35!important}
+  .true-training-table a{font-size:.62rem!important}
+  .true-table-page{overflow:hidden!important}
+  .true-table-page .training-wrap{overflow:hidden!important;width:100%!important}
+}
+@media(max-width:390px){
+  .true-training-table{font-size:.57rem!important}
+  .true-training-table th,.true-training-table td{padding:5px 3px!important}
+  .true-table-page .sheet-inner{padding-inline:5px!important}
+}
