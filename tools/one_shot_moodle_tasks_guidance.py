@@ -2,7 +2,9 @@ from pathlib import Path
 import re
 
 p = Path('index.html')
+cssp = Path('styles.css')
 s = p.read_text(encoding='utf-8')
+styles = cssp.read_text(encoding='utf-8')
 
 pat = re.compile(r'\n  <section class="sheet moodle-page" id="moodle">.*?\n  </section>\n\n  <section class="sheet workbooks-page" id="workbooks">', re.S)
 m = pat.search(s)
@@ -54,6 +56,24 @@ new = '''
 
 s = s[:m.start()] + '\n' + new + s[m.end():]
 
+marker = '/* moodle-tasks-guidance-2026-10-16 */'
+if marker not in styles:
+    styles += '''\n\n/* moodle-tasks-guidance-2026-10-16 */
+.moodle-guidance-grid,.required-task-grid,.assessment-date-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.moodle-guide,.october-required,.assessment-dates{position:relative;border:1px solid rgba(108,84,167,.18);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:0 14px 32px rgba(87,62,140,.08)}
+.moodle-guide{padding:22px}.moodle-guide h3,.october-required h3,.assessment-dates h3{margin:6px 0 10px;color:#4d3e82}.moodle-guide p,.october-required p,.assessment-dates p{line-height:1.72;color:#536a7d}
+.guide-kicker,.grade-pill{display:inline-flex;align-items:center;min-height:30px;padding:5px 10px;border-radius:999px;font:800 .76rem/1.2 "Rubik",Arial,sans-serif}
+.mandatory-guide .guide-kicker{background:#fff0c9;color:#835711}.assessment-guide .guide-kicker{background:#e8f2ff;color:#205f94}
+.teacher-warning{margin-top:16px;padding:16px 18px;border-radius:18px;background:linear-gradient(135deg,#fff5db,#fffaf0);border:1px solid rgba(190,132,32,.24);color:#6d4d14;line-height:1.7}
+.teacher-warning strong{color:#8a5d09}.october-required,.assessment-dates{margin-top:18px;padding:22px}.required-task-grid,.assessment-date-grid{margin-top:14px}
+.required-task-grid article,.assessment-date-grid article{padding:18px;border-radius:18px;background:#fff;border:1px solid rgba(108,84,167,.14)}
+.required-task-grid article:nth-child(1) .grade-pill,.assessment-date-grid article:nth-child(2) .grade-pill{background:#e7f7ff;color:#176e98}
+.required-task-grid article:nth-child(2) .grade-pill,.assessment-date-grid article:nth-child(1) .grade-pill{background:#fff0d4;color:#8b5b13}
+.required-task-grid h4{margin:12px 0 6px;color:#304f67;font-size:1.22rem}.task-link-note{margin-top:12px!important;padding-top:12px;border-top:1px dashed #d8d3e7;font-size:.92rem}
+.assessment-date-grid strong{display:block;margin-top:12px;color:#3f356d;font:900 1.25rem/1.2 "Rubik",Arial,sans-serif}
+@media(max-width:720px){.moodle-guidance-grid,.required-task-grid,.assessment-date-grid{grid-template-columns:1fr;gap:12px}.moodle-guide,.october-required,.assessment-dates{border-radius:20px}.moodle-guide,.october-required,.assessment-dates,.required-task-grid article,.assessment-date-grid article{padding:18px}.teacher-warning{padding:14px 15px;border-radius:16px}}
+'''
+
 for token in [
     'משימות חובה ומשימות הערכה',
     'הפריסות',
@@ -68,6 +88,9 @@ for token in [
 ]:
     if token not in s:
         raise SystemExit('missing token: ' + token)
+if marker not in styles:
+    raise SystemExit('CSS marker missing')
 
 p.write_text(s, encoding='utf-8')
+cssp.write_text(styles, encoding='utf-8')
 print('Moodle tasks guidance updated')
