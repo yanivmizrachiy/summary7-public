@@ -1,0 +1,29 @@
+name: One-shot table wrap fix
+
+on:
+  push:
+    paths:
+      - '.github/workflows/one-shot-table-wrap.yml'
+      - 'tools/one_shot_table_text_wrap.py'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply table wrapping fix
+        run: python3 tools/one_shot_table_text_wrap.py
+      - name: Commit table wrapping fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes needed"
+          else
+            git commit -m "Fix mobile table text overflow"
+            git push
+          fi
