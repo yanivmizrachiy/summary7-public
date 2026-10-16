@@ -6,7 +6,7 @@ css_path = Path('styles.css')
 css = css_path.read_text(encoding='utf-8')
 
 # Only selectors proven absent from current HTML.
-dead_markers = ['class="actions"','class="cards"','class="panel"','class="grades"','<header','</header>']
+dead_markers = ['class="actions"','class="cards"','class="grades"','<header','</header>']
 for marker in dead_markers:
     if marker in html:
         raise SystemExit(f'ABORT: legacy marker still active: {marker}')
@@ -14,8 +14,7 @@ for marker in dead_markers:
 selectors = [
     'header','header:before','header:after','header small','header h1','header p',
     '.actions','.actions button,.actions a','.actions button:hover,.actions a:hover',
-    '.cards','.cards a,.panel','.cards a','.cards a:hover',
-    '.panel','.panel b',
+    '.cards','.cards a','.cards a:hover',
     '.grades','.grades .panel','.grades h3','.grades h4','.grades ul','.grades li'
 ]
 removed = 0
@@ -31,7 +30,7 @@ if removed == 0:
     raise SystemExit('ABORT: no proven-dead CSS rules were removed')
 
 # Safety: active critical selectors must remain.
-for required in ['.lux-hero', '.author-intro', '.training-table', '.cal-table', '.workbooks-table', '#courses', '#teaching', 'nav.quick']:
+for required in ['.lux-hero', '.author-intro', '.training-table', '.cal-table', '.workbooks-table', '#courses', '#teaching', 'nav.quick', '.panel']:
     if required not in css:
         raise SystemExit(f'ABORT: critical selector missing after cleanup: {required}')
 
