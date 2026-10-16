@@ -125,3 +125,8 @@ a,p,span,strong,h1,h2,h3,h4,li,td,th{overflow-wrap:anywhere;word-break:break-wor
   .date-row{position:static;width:100%}
   .cover-inner{min-height:0;padding-top:0}
 }
+
+
+/* grade-page-title-final */
+.grade-page-title{margin:0 0 18px;color:var(--blue);font:900 clamp(2rem,5vw,3.4rem)/1.05 "Frank Ruhl Libre",serif;letter-spacing:-.02em}
+@media(max-width:720px){.grade-page-title{margin:0 0 14px;font-size:2rem;line-height:1.08}}
