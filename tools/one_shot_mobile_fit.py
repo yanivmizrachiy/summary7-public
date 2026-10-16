@@ -2,7 +2,7 @@ from pathlib import Path
 
 p=Path('index.html')
 s=p.read_text(encoding='utf-8')
-marker='/* mobile-fit-v1 */'
+marker='id="mobile-fit-v1"'
 if marker in s:
     raise SystemExit('already patched')
 css=r'''
@@ -29,13 +29,11 @@ img,iframe,video,svg{max-width:100%}
   h1,h2,h3,h4,p,li,a,strong,span{overflow-wrap:anywhere}
   .hero-title-line{white-space:normal!important}
 
-  /* Training rows are already cards; enforce zero intrinsic width. */
   #courses .training-wrap{overflow:visible!important}
   #courses .training-table{min-width:0!important;max-width:100%!important;width:100%!important}
   #courses .training-table tbody tr,#courses .training-table tbody td{min-width:0!important;max-width:100%!important}
   #courses .training-table tbody td{grid-template-columns:minmax(88px,34%) minmax(0,1fr)!important}
 
-  /* Calendar becomes phone-native cards instead of a 720px table. */
   #calendar .cal-wrap{overflow:visible!important;border:0!important;box-shadow:none!important;background:transparent!important}
   #calendar .cal-table,#calendar .cal-table tbody,#calendar .cal-table tr,#calendar .cal-table td{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important}
   #calendar .cal-table{border:0!important;background:transparent!important}
@@ -46,7 +44,6 @@ img,iframe,video,svg{max-width:100%}
   #calendar .cal-table tbody td:nth-child(2)::before{content:'שעה';font-weight:800;color:#7a5a1f}
   #calendar .cal-table tbody td:nth-child(3)::before{content:'אירוע';font-weight:800;color:#7a5a1f}
 
-  /* Workbooks become compact two-part cards, no sideways table scrolling. */
   #workbooks .workbooks-table-wrap{overflow:visible!important;border:0!important;box-shadow:none!important;background:transparent!important}
   #workbooks .workbooks-table,#workbooks .workbooks-table tbody,#workbooks .workbooks-table tr,#workbooks .workbooks-table th,#workbooks .workbooks-table td{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important}
   #workbooks .workbooks-table{border:0!important;background:transparent!important}
@@ -56,7 +53,6 @@ img,iframe,video,svg{max-width:100%}
   #workbooks .workbooks-table tbody td{padding:0!important;border:0!important;background:transparent!important}
   #workbooks .workbook-3d-button{width:100%!important;max-width:100%!important;min-width:0!important}
 
-  /* Keep all decorative pieces inside the viewport. */
   .hero-art,.art-seven,.art-orbit{max-width:100vw!important}
 }
 
