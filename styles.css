@@ -53,3 +53,26 @@ h3{color:#214f76}.lead{font-size:clamp(1rem,2.2vw,1.17rem);line-height:1.85;colo
 @media(max-width:390px){.sheet-inner{padding-inline:14px}.date-row{gap:8px;font-size:.69rem}.author-card{align-items:flex-start}.workbook-grid a{align-items:flex-start;flex-direction:column;gap:5px}.story,.task-list article,.important-links article,.grades article{padding:16px}h2{font-size:2.35rem}.training-table td{grid-template-columns:1fr;gap:4px;padding:10px 12px}.training-table td:before{font-size:.72rem}}
 
 @media print{@page{size:A4;margin:12mm}html,body{background:#fff}main{display:block;width:auto;padding:0}.sheet{break-after:page;border-radius:0;box-shadow:none;overflow:visible;background:#fff!important}.sheet-inner{padding:0}.cover{min-height:0}.cover:before,.cover:after{display:none}.training-table{font-size:8.5pt;table-layout:auto}.training-table th,.training-table td{padding:5px 4px}.story,.grades article,.task-list article,.workbook-grid a,.important-links article,.event-list article{box-shadow:none}}
+
+
+/* split-teaching-pages-2026-10-16 */
+.teaching-intro{background:#fff;box-shadow:none;border-radius:0}
+.teaching-head{padding-top:18px!important;padding-bottom:12px!important}
+.teaching-lead{margin:0;color:#607487;font-size:1rem;line-height:1.6}
+.grade-page{min-height:72svh;display:block}
+.grade-page-inner{padding-top:24px!important;padding-bottom:34px!important}
+.grade-sheet{max-width:820px;margin:0 auto;padding:clamp(22px,4vw,34px);border-radius:26px;background:rgba(255,255,255,.90);border:1px solid rgba(255,255,255,.72);box-shadow:0 20px 50px rgba(30,45,70,.10);backdrop-filter:blur(10px)}
+.grade-sheet h3{margin:0 0 18px;font:900 clamp(2.1rem,7vw,3.8rem)/1 "Frank Ruhl Libre",serif}
+.grade-sheet h4{margin:20px 0 8px;font-size:1rem;letter-spacing:.01em}
+.grade-sheet ul{margin:0;padding-inline-start:22px}
+.grade-sheet li,.grade-sheet p{font-size:1.02rem;line-height:1.75;color:#314e64}
+.grade-7{background:radial-gradient(circle at 88% 10%,rgba(39,190,255,.26),transparent 28%),linear-gradient(135deg,#dff7ff,#f7fdff 52%,#eaf2ff)}
+.grade-7 .grade-sheet h3,.grade-7 .grade-sheet h4{color:#126e9b}
+.grade-8{background:radial-gradient(circle at 14% 12%,rgba(255,181,64,.30),transparent 28%),linear-gradient(135deg,#fff0c9,#fffaf0 52%,#fff4e4)}
+.grade-8 .grade-sheet h3,.grade-8 .grade-sheet h4{color:#9b6412}
+.grade-9-high{background:radial-gradient(circle at 84% 10%,rgba(157,111,255,.28),transparent 28%),linear-gradient(135deg,#efe7ff,#fbf9ff 52%,#edf0ff)}
+.grade-9-high .grade-sheet h3,.grade-9-high .grade-sheet h4{color:#6842a8}
+.grade-9-three{background:radial-gradient(circle at 12% 10%,rgba(55,196,139,.28),transparent 28%),linear-gradient(135deg,#ddf8ed,#f8fffc 52%,#eaf9f1)}
+.grade-9-three .grade-sheet h3,.grade-9-three .grade-sheet h4{color:#21745a}
+@media(max-width:720px){.teaching-head{padding:16px 17px 8px!important}.teaching-head h2{margin-bottom:8px}.grade-page{min-height:0;border-radius:0}.grade-page-inner{padding:18px 14px 24px!important}.grade-sheet{padding:20px 18px;border-radius:20px;box-shadow:0 10px 26px rgba(30,45,70,.08)}.grade-sheet h3{font-size:2.35rem;margin-bottom:14px}.grade-sheet h4{margin-top:17px}.grade-sheet li,.grade-sheet p{font-size:1rem;line-height:1.65}}
+@media print{.teaching-intro{display:none}.grade-page{min-height:297mm;page-break-after:always}.grade-page-inner{padding:14mm!important}.grade-sheet{box-shadow:none}}
