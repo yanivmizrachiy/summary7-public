@@ -6,6 +6,7 @@ on:
       - '.github/workflows/premium-polish.yml'
       - 'tools/polish_summary7.py'
       - 'tools/light_cover.py'
+      - 'tools/full_training_table.py'
 
 permissions:
   contents: write
@@ -23,6 +24,9 @@ jobs:
       - name: Apply light luxury cover
         run: python3 tools/light_cover.py
 
+      - name: Apply full trainings table
+        run: python3 tools/full_training_table.py
+
       - name: Commit polished site
         run: |
           git config user.name "github-actions[bot]"
@@ -31,6 +35,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes needed"
           else
-            git commit -m "Light luxury cover for Summary 7"
+            git commit -m "Publish full mobile training table"
             git push
           fi
