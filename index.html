@@ -3,17 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#eef5fb">
+  <meta name="theme-color" content="#0a0f24">
   <meta name="description" content="סיכום שבועי מס׳ 7 — הדרכה במתמטיקה, מחוז ירושלים והעיר ירושלים">
   <title>סיכום שבועי מס׳ 7 | מחוז ירושלים</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- ===== Masthead (sticky, with gold reading-progress line) ===== -->
+<header class="masthead" aria-label="כותרת קבועה">
+  <div class="brand">
+    <img src="assets/logo.png" alt="לוגו מחוז ירושלים">
+    <div><b>סיכום שבועי</b><span>מחוז ירושלים</span></div>
+  </div>
+  <div class="edition-chip" aria-label="סיכום מס׳ 7">7</div>
+  <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+</header>
+
+<!-- SVG corner ornament, reused on every page via <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="corner" viewBox="0 0 30 30"><path d="M2 28V8a6 6 0 0 1 6-6h20"/><path d="M6 24V12a4 4 0 0 1 4-4h14"/></symbol>
+  <!-- watercolor ribbon bow for the birthday page -->
+  <symbol id="bow" viewBox="0 0 120 90">
+    <path d="M60 40C48 22 20 14 12 26c-8 12 14 22 44 18Z" fill="currentColor" opacity=".55"/>
+    <path d="M60 40c12-18 40-26 48-14 8 12-14 22-44 18Z" fill="currentColor" opacity=".55"/>
+    <path d="M60 40C50 30 30 26 24 32c-5 6 10 12 36 10Z" fill="currentColor" opacity=".35"/>
+    <path d="M60 40c10-10 30-14 36-8 5 6-10 12-36 10Z" fill="currentColor" opacity=".35"/>
+    <path d="M58 42c-8 10-16 26-26 40 6-4 14-10 20-18 2 8 4 16 10 22-2-14 0-30 4-44Z" fill="currentColor" opacity=".5"/>
+    <path d="M62 42c8 10 16 26 26 40-6-4-14-10-20-18-2 8-4 16-10 22 2-14 0-30-4-44Z" fill="currentColor" opacity=".5"/>
+    <ellipse cx="60" cy="41" rx="7" ry="6" fill="currentColor" opacity=".8"/>
+  </symbol>
+</svg>
+
 <main>
-  <section class="sheet cover" aria-label="שער סיכום שבועי 7">
+
+  <!-- ===== Cover ===== -->
+  <section class="sheet cover reveal" aria-label="שער סיכום שבועי 7">
     <div class="cover-inner">
       <div class="date-row"><span dir="ltr">16.10.2026</span><span>בס״ד · יום שישי · תשפ״ז</span></div>
       <div class="logo-ring"><img src="assets/logo.png" alt="לוגו מחוז ירושלים"></div>
@@ -24,14 +52,57 @@
     </div>
   </section>
 
-  <section class="sheet grade-page grade-7" id="grade-7"><div class="sheet-inner grade-page-inner"><h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ז׳</span></h2><article class="grade-sheet"><h4>תחום מספרי</h4><ul><li>מספרים שליליים ומספרים נגדיים</li><li>חיבור וחיסור מספרים מכוונים</li><li>הרחבת מערכת הצירים</li></ul><h4>תחום גאומטרי</h4><ul><li>חוצה זווית</li><li>סכום והפרש זוויות</li><li>זוויות צמודות וקודקודיות</li></ul><h4>משימת חובה</h4><p>גיימינג־אפ — מערכת צירים ומספרים חיוביים</p></article></div></section>
-  <section class="sheet grade-page grade-8" id="grade-8"><div class="sheet-inner grade-page-inner"><h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ח׳</span></h2><article class="grade-sheet"><h4>תחום מספרי</h4><ul><li>יחס</li><li>פרופורציה</li><li>קנה מידה</li><li>אחוזים</li></ul><h4>גאומטריה</h4><ul><li>משפט פיתגורס</li><li>גליל</li><li>חרוט</li></ul><h4>אי־ודאות וסטטיסטיקה</h4><ul><li>איסוף מידע</li><li>קריאת מידע</li><li>שכיחות</li></ul><h4>משימת חובה</h4><p>ציור קיר — יחס, פרופורציה וקנה מידה</p></article></div></section>
-  <section class="sheet grade-page grade-9-high" id="grade-9-high"><div class="sheet-inner grade-page-inner"><h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ט׳ רגילה</span></h2><article class="grade-sheet"><h4>אלגברה</h4><ul><li>פירוק לגורמים</li><li>תלת־איבר ריבועי</li><li>נוסחאות הכפל המקוצר</li><li>משוואות ריבועיות בסיסיות</li><li>שברים אלגבריים</li></ul><h4>גאומטריה</h4><ul><li>משפטים הפוכים במשולש שווה שוקיים</li><li>חוצה זווית הראש, גובה ותיכון</li><li>שילוב במערכת צירים</li></ul></article></div></section>
-  <section class="sheet grade-page grade-9-three" id="grade-9-three"><div class="sheet-inner grade-page-inner"><h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ט׳ מצומצמת</span></h2><article class="grade-sheet"><h4>פונקציה קווית</h4><ul><li>שיפוע וקצב שינוי</li><li>ייצוג אלגברי וגרפי</li><li>נקודות חיתוך עם הצירים</li><li>מציאת משוואת ישר</li></ul><h4>אלגברה</h4><ul><li>חוק הפילוג והפילוג המורחב</li><li>פתרון משוואות פשוטות</li></ul><h4>גאומטריה</h4><ul><li>משפט פיתגורס</li><li>חישובי צלעות, היקפים ושטחים</li></ul></article></div></section>
+  <!-- ===== מה אנחנו מלמדים? — דף נפרד לכל שכבה ===== -->
+  <section class="sheet grade-page grade-7 reveal" id="grade-7">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner grade-page-inner">
+      <h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ז׳</span></h2>
+      <article class="grade-sheet">
+        <div><h4>תחום מספרי</h4><ul><li>מספרים שליליים ומספרים נגדיים</li><li>חיבור וחיסור מספרים מכוונים</li><li>הרחבת מערכת הצירים</li></ul></div>
+        <div><h4>תחום גאומטרי</h4><ul><li>חוצה זווית</li><li>סכום והפרש זוויות</li><li>זוויות צמודות וקודקודיות</li></ul></div>
+        <div><h4>משימת חובה</h4><p>גיימינג־אפ — מערכת צירים ומספרים חיוביים</p></div>
+      </article>
+    </div>
+  </section>
 
+  <section class="sheet grade-page grade-8 reveal" id="grade-8">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner grade-page-inner">
+      <h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ח׳</span></h2>
+      <article class="grade-sheet">
+        <div><h4>תחום מספרי</h4><ul><li>יחס</li><li>פרופורציה</li><li>קנה מידה</li><li>אחוזים</li></ul></div>
+        <div><h4>גאומטריה</h4><ul><li>משפט פיתגורס</li><li>גליל</li><li>חרוט</li></ul></div>
+        <div><h4>אי־ודאות וסטטיסטיקה</h4><ul><li>איסוף מידע</li><li>קריאת מידע</li><li>שכיחות</li></ul></div>
+        <div><h4>משימת חובה</h4><p>ציור קיר — יחס, פרופורציה וקנה מידה</p></div>
+      </article>
+    </div>
+  </section>
 
+  <section class="sheet grade-page grade-9-high reveal" id="grade-9-high">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner grade-page-inner">
+      <h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ט׳ רגילה</span></h2>
+      <article class="grade-sheet">
+        <div><h4>אלגברה</h4><ul><li>פירוק לגורמים</li><li>תלת־איבר ריבועי</li><li>נוסחאות הכפל המקוצר</li><li>משוואות ריבועיות בסיסיות</li><li>שברים אלגבריים</li></ul></div>
+        <div><h4>גאומטריה</h4><ul><li>משפטים הפוכים במשולש שווה שוקיים</li><li>חוצה זווית הראש, גובה ותיכון</li><li>שילוב במערכת צירים</li></ul></div>
+      </article>
+    </div>
+  </section>
 
-  <section class="sheet tnufa-page" id="tnufa-2026">
+  <section class="sheet grade-page grade-9-three reveal" id="grade-9-three">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner grade-page-inner">
+      <h2 class="grade-page-title"><span class="grade-title-main">מה אנחנו מלמדים?</span><span class="grade-title-sub">בשכבת ט׳ מצומצמת</span></h2>
+      <article class="grade-sheet">
+        <div><h4>פונקציה קווית</h4><ul><li>שיפוע וקצב שינוי</li><li>ייצוג אלגברי וגרפי</li><li>נקודות חיתוך עם הצירים</li><li>מציאת משוואת ישר</li></ul></div>
+        <div><h4>אלגברה</h4><ul><li>חוק הפילוג והפילוג המורחב</li><li>פתרון משוואות פשוטות</li></ul></div>
+        <div><h4>גאומטריה</h4><ul><li>משפט פיתגורס</li><li>חישובי צלעות, היקפים ושטחים</li></ul></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== מבחן תנופה — דף ירוק ===== -->
+  <section class="sheet tnufa-page reveal" id="tnufa-2026">
     <div class="sheet-inner tnufa-inner">
       <p class="eyebrow tnufa-eyebrow">לקראת מבחן תנופה · כיתה ט׳</p>
       <h2>מבחן תנופה במתמטיקה</h2>
@@ -49,23 +120,177 @@
     </div>
   </section>
 
-  <section class="sheet science-a4-page" id="science-2027"><div class="sheet-inner science-a4-inner"><p class="eyebrow">מה חדש השבוע? · תוכנית לכיתות ט׳</p><article class="science-a4-card"><div class="whatsapp-label">🔬 תוכנית מיוחדת לכיתות ט׳</div><h3>מדע בכיתה 2027 יוצאת לדרך!</h3><p><strong>מזמינים אתכם להצטרף לתוכנית מדע בכיתה</strong>, המיועדת לתלמידי ותלמידות כיתות ט׳, במסגרת מרתון ישראל ריאלית — ינואר 2027.</p><p>התוכנית מפגישה את התלמידים עם אנשי ונשות מקצוע מעולמות המדע, הטכנולוגיה, האקדמיה ומערכת הביטחון למפגש השראה, רגע לפני בחירת המגמות.</p><p>במפגש אישי ובגובה העיניים, התלמידים יכירו את החיבור בין מקצועות ה־STEM לעשייה בתעשייה ובמחקר, וישמעו על מסלולי קריירה ועל הדרך האישית והמקצועית של העוסקים בתחומים אלה.</p><div class="link-row"><a class="science-register" href="https://qrco.de/bh31gu" target="_blank" rel="noopener noreferrer">🔗 לפרטים נוספים ולהרשמה לתוכנית</a></div></article></div></section>
+  <!-- ===== מדע בכיתה 2027 ===== -->
+  <section class="sheet science-a4-page reveal" id="science-2027">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner science-a4-inner">
+      <p class="eyebrow">מה חדש השבוע? · תוכנית לכיתות ט׳</p>
+      <article class="science-a4-card">
+        <div class="whatsapp-label">🔬 תוכנית מיוחדת לכיתות ט׳</div>
+        <h3>מדע בכיתה 2027 יוצאת לדרך!</h3>
+        <p><strong>מזמינים אתכם להצטרף לתוכנית מדע בכיתה</strong>, המיועדת לתלמידי ותלמידות כיתות ט׳, במסגרת מרתון ישראל ריאלית — ינואר 2027.</p>
+        <p>התוכנית מפגישה את התלמידים עם אנשי ונשות מקצוע מעולמות המדע, הטכנולוגיה, האקדמיה ומערכת הביטחון למפגש השראה, רגע לפני בחירת המגמות.</p>
+        <p>במפגש אישי ובגובה העיניים, התלמידים יכירו את החיבור בין מקצועות ה־STEM לעשייה בתעשייה ובמחקר, וישמעו על מסלולי קריירה ועל הדרך האישית והמקצועית של העוסקים בתחומים אלה.</p>
+        <div class="link-row"><a class="science-register" href="https://qrco.de/bh31gu" target="_blank" rel="noopener noreferrer">🔗 לפרטים נוספים ולהרשמה לתוכנית</a></div>
+      </article>
+    </div>
+  </section>
 
-  <section class="sheet news-page" id="news"><div class="sheet-inner"><p class="eyebrow">עדכוני השבוע</p><h2>מה חדש השבוע?</h2><div class="story-list"><article class="story feature-story"><h3>פורסם סרטון המחשה של איילת קריספין בנושא חרוט</h3><p>פורסם סרטון המחשה שמסייע להמחיש באופן חזותי וברור את מבנה החרוט ואת הרעיונות המתמטיים המרכזיים בנושא.</p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eAW0AnHfQC8" title="סרטון המחשה של איילת קריספין בנושא חרוט" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="story"><h3>פורסמו דפי עבודה בנושא חרוט</h3><p>פורסמו דפי עבודה בנושא חרוט לתרגול ולהעמקת ההבנה.</p><div class="link-row"><a href="https://yanivmizrachiy.github.io/harut/" target="_blank" rel="noopener noreferrer">פתיחת דפי העבודה בנושא חרוט</a></div></article><article class="story"><h3>פורסמו דפי עבודה בנושא גליל</h3><p>פורסמו דפי עבודה בנושא גליל לתרגול ולהעמקת ההבנה.</p><div class="link-row"><a href="https://galil-new.vercel.app" target="_blank" rel="noopener noreferrer">פתיחת דפי העבודה בנושא גליל</a></div></article><article class="story"><h3>קיימנו הדרכה בנושא Moodle</h3><p>עסקנו בפתיחת מרחבי למידה, בחיבור התלמידים למרחבים ובהגשת משימות החובה בשכבות ז׳–ח׳.</p></article></div></div></section>
+  <!-- ===== מה חדש השבוע ===== -->
+  <section class="sheet news-page reveal" id="news">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner">
+      <p class="eyebrow">עדכוני השבוע</p>
+      <h2>מה חדש השבוע?</h2>
+      <div class="story-list">
+        <article class="story feature-story">
+          <h3>פורסם סרטון המחשה של איילת קריספין בנושא חרוט</h3>
+          <p>פורסם סרטון המחשה שמסייע להמחיש באופן חזותי וברור את מבנה החרוט ואת הרעיונות המתמטיים המרכזיים בנושא.</p>
+          <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/eAW0AnHfQC8" title="סרטון המחשה של איילת קריספין בנושא חרוט" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        </article>
+        <article class="story">
+          <h3>פורסמו דפי עבודה בנושא חרוט</h3>
+          <p>פורסמו דפי עבודה בנושא חרוט לתרגול ולהעמקת ההבנה.</p>
+          <div class="link-row"><a href="https://yanivmizrachiy.github.io/harut/" target="_blank" rel="noopener noreferrer">פתיחת דפי העבודה בנושא חרוט</a></div>
+        </article>
+        <article class="story">
+          <h3>פורסמו דפי עבודה בנושא גליל</h3>
+          <p>פורסמו דפי עבודה בנושא גליל לתרגול ולהעמקת ההבנה.</p>
+          <div class="link-row"><a href="https://galil-new.vercel.app" target="_blank" rel="noopener noreferrer">פתיחת דפי העבודה בנושא גליל</a></div>
+        </article>
+        <article class="story">
+          <h3>קיימנו הדרכה בנושא Moodle</h3>
+          <p>עסקנו בפתיחת מרחבי למידה, בחיבור התלמידים למרחבים ובהגשת משימות החובה בשכבות ז׳–ח׳.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  
-  <section class="sheet courses-page true-table-page" id="courses"><div class="sheet-inner wide"><p class="eyebrow">פיתוח מקצועי · תשפ״ז</p><h2>טבלת השתלמויות — פרטים מרכזיים</h2><p class="training-note">אותן השתלמויות מוצגות בכל חלק; העמודות מפוצלות כדי לשמור על טבלה אמיתית, קריאה מלאה וללא גלילה אופקית.</p><div class="training-wrap"><table class="training-table true-training-table"><thead><tr><th>שם ההשתלמות</th><th>נושא</th><th>קהל יעד</th></tr></thead><tbody><tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>הובלת צוות מתמטיקה ופיתוח מקצועי של הרכז</td><td>רכזי מתמטיקה בחטיבת הביניים</td></tr><tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>שילוב AI ו־Moodle בהוראת מתמטיקה וביישום תוכנית הלימודים המעודכנת</td><td>מורי מתמטיקה ז׳–ח׳</td></tr><tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>הוראה מותאמת לתלמידים מתקשים ולחינוך המיוחד</td><td>מורי מתמטיקה בחטיבת הביניים וחינוך מיוחד</td></tr><tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>בניית גשר מכיתה ט׳ ללימודי 4–5 יח״ל: אלגברה, פרבולה, גאומטריה, הערכה וחשיבה מתמטית</td><td>מורי כיתות ט׳, בדגש לקראת 4–5 יח״ל</td></tr><tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>הוראת גאומטריה באמצעות המחשה פיזית ומעבר להבנה פורמלית</td><td>מורי מתמטיקה בחטיבת הביניים</td></tr><tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>מוטיבציה, קוגניציה, חשיבה ופתרון בעיות; קיימת אי־התאמה לכותרת הרשומה באתר</td><td>חטיבת הביניים — טעון אימות סופי</td></tr></tbody></table></div></div></section>
+  <!-- ===== טבלאות השתלמויות — טבלאות אמיתיות, 12 שדות מפוצלים לדפים רצופים ===== -->
+  <section class="sheet courses-page true-table-page reveal" id="courses">
+    <div class="sheet-inner wide">
+      <p class="eyebrow">פיתוח מקצועי · תשפ״ז</p>
+      <h2>טבלת השתלמויות — פרטים מרכזיים</h2>
+      <p class="training-note">אותן השתלמויות מוצגות בכל חלק; העמודות מפוצלות כדי לשמור על טבלה אמיתית, קריאה מלאה וללא גלילה אופקית.</p>
+      <div class="training-wrap">
+        <table class="training-table true-training-table">
+          <thead><tr><th>שם ההשתלמות</th><th>נושא</th><th>קהל יעד</th></tr></thead>
+          <tbody>
+            <tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>הובלת צוות מתמטיקה ופיתוח מקצועי של הרכז</td><td>רכזי מתמטיקה בחטיבת הביניים</td></tr>
+            <tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>שילוב AI ו־Moodle בהוראת מתמטיקה וביישום תוכנית הלימודים המעודכנת</td><td>מורי מתמטיקה ז׳–ח׳</td></tr>
+            <tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>הוראה מותאמת לתלמידים מתקשים ולחינוך המיוחד</td><td>מורי מתמטיקה בחטיבת הביניים וחינוך מיוחד</td></tr>
+            <tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>בניית גשר מכיתה ט׳ ללימודי 4–5 יח״ל: אלגברה, פרבולה, גאומטריה, הערכה וחשיבה מתמטית</td><td>מורי כיתות ט׳, בדגש לקראת 4–5 יח״ל</td></tr>
+            <tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>הוראת גאומטריה באמצעות המחשה פיזית ומעבר להבנה פורמלית</td><td>מורי מתמטיקה בחטיבת הביניים</td></tr>
+            <tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>מוטיבציה, קוגניציה, חשיבה ופתרון בעיות; קיימת אי־התאמה לכותרת הרשומה באתר</td><td>חטיבת הביניים — טעון אימות סופי</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet courses-page true-table-page"><div class="sheet-inner wide"><p class="eyebrow">פיתוח מקצועי · תשפ״ז</p><h2>טבלת השתלמויות — מועדים ומפגשים</h2><div class="training-wrap"><table class="training-table true-training-table"><thead><tr><th>שם ההשתלמות</th><th>מועדים ומפגש ראשון</th><th>יום / שעה / מיקום</th></tr></thead><tbody><tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>מפגש ראשון 13.10.2026; הסילבוס מציג 8 מפגשים, אך קיימת רשימת מועדים מתחרה ולכן המחזור דורש אימות</td><td>שעות ומיקום — טעונים אימות למחזור</td></tr><tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>פתיחה 28.10.2026 במסגרת יום העיון; המשך מפגשים בסילבוס</td><td>28.10 — מפגש פנים אל פנים בפסג״ה מודיעין; יתר הפרטים דורשים הצלבה</td></tr><tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>מפגש ראשון 28.10.2026; הסילבוס מציג 10 מפגשים</td><td>רוב המפגשים 19:00–21:30; מיקום/מתכונת לפי הסילבוס</td></tr><tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>10 מפגשים · 13.10.2026–16.02.2027</td><td>ימי ג׳ · 19:00–21:30; חלק מהמפגשים א־סינכרוניים לפי הסילבוס</td></tr><tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>מפגש ראשון 28.10.2026; הסילבוס מציג 9 מפגשים</td><td>28.10 · 15:00–19:00 · פסג״ה מודיעין; יתר המפגשים לפי הסילבוס</td></tr><tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>המסמך המקושר מציג 10 מפגשים, החל מ־28.10.2026</td><td>פרטי הפתיחה דורשים אימות</td></tr></tbody></table></div></div></section>
+  <section class="sheet courses-page true-table-page reveal">
+    <div class="sheet-inner wide">
+      <p class="eyebrow">פיתוח מקצועי · תשפ״ז</p>
+      <h2>טבלת השתלמויות — מועדים ומפגשים</h2>
+      <div class="training-wrap">
+        <table class="training-table true-training-table">
+          <thead><tr><th>שם ההשתלמות</th><th>מועדים ומפגש ראשון</th><th>יום / שעה / מיקום</th></tr></thead>
+          <tbody>
+            <tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>מפגש ראשון 13.10.2026; הסילבוס מציג 8 מפגשים, אך קיימת רשימת מועדים מתחרה ולכן המחזור דורש אימות</td><td>שעות ומיקום — טעונים אימות למחזור</td></tr>
+            <tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>פתיחה 28.10.2026 במסגרת יום העיון; המשך מפגשים בסילבוס</td><td>28.10 — מפגש פנים אל פנים בפסג״ה מודיעין; יתר הפרטים דורשים הצלבה</td></tr>
+            <tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>מפגש ראשון 28.10.2026; הסילבוס מציג 10 מפגשים</td><td>רוב המפגשים 19:00–21:30; מיקום/מתכונת לפי הסילבוס</td></tr>
+            <tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>10 מפגשים · 13.10.2026–16.02.2027</td><td>ימי ג׳ · 19:00–21:30; חלק מהמפגשים א־סינכרוניים לפי הסילבוס</td></tr>
+            <tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>מפגש ראשון 28.10.2026; הסילבוס מציג 9 מפגשים</td><td>28.10 · 15:00–19:00 · פסג״ה מודיעין; יתר המפגשים לפי הסילבוס</td></tr>
+            <tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>המסמך המקושר מציג 10 מפגשים, החל מ־28.10.2026</td><td>פרטי הפתיחה דורשים אימות</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet courses-page true-table-page"><div class="sheet-inner wide"><p class="eyebrow">פיתוח מקצועי · תשפ״ז</p><h2>טבלת השתלמויות — היקף, מנחה ומצפן</h2><div class="training-wrap"><table class="training-table true-training-table"><thead><tr><th>שם ההשתלמות</th><th>היקף / גמול</th><th>מנחה</th><th>מספר במצפן</th></tr></thead><tbody><tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>טרם אומת סופית</td><td>טרם אומת סופית</td><td><b dir="ltr">201020</b></td></tr><tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>טרם אומת סופית</td><td>טרם אומת סופית</td><td><b dir="ltr">201590</b></td></tr><tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>טרם אומת סופית</td><td>טרם אומת סופית</td><td><b dir="ltr">201530</b></td></tr><tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>30 שעות</td><td>עידן אחוון / ויקטוריה צורי — כתיב שם המנחה טעון אימות סופי</td><td><b dir="ltr">201041</b></td></tr><tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>טעון אימות סופי</td><td>איילת קריספין</td><td><b dir="ltr">204781</b></td></tr><tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>טרם אומת</td><td>טרם אומת</td><td><b dir="ltr">2014777</b></td></tr></tbody></table></div></div></section>
+  <section class="sheet courses-page true-table-page reveal">
+    <div class="sheet-inner wide">
+      <p class="eyebrow">פיתוח מקצועי · תשפ״ז</p>
+      <h2>טבלת השתלמויות — היקף, מנחה ומצפן</h2>
+      <div class="training-wrap">
+        <table class="training-table true-training-table cols-4">
+          <thead><tr><th>שם ההשתלמות</th><th>היקף / גמול</th><th>מנחה</th><th>מספר במצפן</th></tr></thead>
+          <tbody>
+            <tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>טרם אומת סופית</td><td>טרם אומת סופית</td><td><b dir="ltr">201020</b></td></tr>
+            <tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>טרם אומת סופית</td><td>טרם אומת סופית</td><td><b dir="ltr">201590</b></td></tr>
+            <tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>טרם אומת סופית</td><td>טרם אומת סופית</td><td><b dir="ltr">201530</b></td></tr>
+            <tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>30 שעות</td><td>עידן אחוון / ויקטוריה צורי — כתיב שם המנחה טעון אימות סופי</td><td><b dir="ltr">201041</b></td></tr>
+            <tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>טעון אימות סופי</td><td>איילת קריספין</td><td><b dir="ltr">204781</b></td></tr>
+            <tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>טרם אומת</td><td>טרם אומת</td><td><b dir="ltr">2014777</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet courses-page true-table-page"><div class="sheet-inner wide"><p class="eyebrow">פיתוח מקצועי · תשפ״ז</p><h2>טבלת השתלמויות — מיומנויות, קישורים ואימות</h2><div class="training-wrap"><table class="training-table true-training-table"><thead><tr><th>שם ההשתלמות</th><th>כישורים / מיומנויות</th><th>סילבוס</th><th>הרשמה</th><th>סטטוס אימות</th></tr></thead><tbody><tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>הובלה פדגוגית, ניהול ידע בצוות, שיתוף מקצועי ותכנון עבודת הרכז</td><td><a href="https://drive.google.com/file/d/1QHYojSXEUtFHHtRDhhAb9guiXE4tF-oR/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td><td>לא אומת קישור ישיר</td><td>מצפן וסילבוס אומתו; לוח המחזור דורש אימות</td></tr><tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>פדגוגיה דיגיטלית, שילוב בינה מלאכותית, ניהול מרחב Moodle, בניית משימות והטמעת עדכון ת״ל</td><td><a href="https://drive.google.com/file/d/1MPTDPrM6no1dOwKkayU4RSEpfFDbijTH/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td><td>לא אומת קישור ישיר</td><td>מצפן, סילבוס ומפגש פתיחה זוהו; יתר המועדים בהצלבה</td></tr><tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>הוראה דיפרנציאלית, התאמת משימות, איתור קושי, תיווך מתמטי ותמיכה בתלמידי חנ״מ</td><td><a href="https://drive.google.com/file/d/1aVlPA5UMQfbSIAmPs0bhoCsPJ86VStGe/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td><td>לא אומת קישור ישיר</td><td>מצפן וסילבוס אומתו; פרטי מנחה/היקף דורשים אימות</td></tr><tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>חשיבה אלגברית, הנמקה מתמטית, הוראה מרצף שש־שנתי, הערכה, למידה מטעויות וכלים דיגיטליים בגאומטריה</td><td><a href="https://drive.google.com/file/d/14ybA9ao125SbMv4yqwa_u0inSpCcMQh-/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td><td>לא אומת קישור ישיר</td><td>מועד, שעות, היקף, מנחים וסילבוס אומתו במקור</td></tr><tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>המחשה גאומטרית, ויזואליזציה מרחבית, מודל פיזי, מעבר מקונקרטי לפורמלי והנמקה גאומטרית</td><td><a href="https://drive.google.com/file/d/1FTEh4Lt5sBqd1kHF_riunRx6m4IjdxlS/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td><td>לא אומת קישור ישיר</td><td>המספר מופיע במקור המאוחר; בעלון הישן הופיע „בקרוב” — נדרש אימות גרסה עדכנית</td></tr><tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>מוטיבציה ללמידה, קוגניציה, חשיבה מתמטית, קבלת החלטות ופתרון בעיות</td><td><a href="https://docs.google.com/document/d/1-FTftCvxTF0v1HiR4p8eUg464LUVHlfU3dd_-kuCbB4/edit" target="_blank" rel="noopener noreferrer">פתיחת מסמך הסילבוס</a></td><td>לא אומת קישור ישיר</td><td><strong>CONFLICT / VERIFY</strong> — שם הקורס ומספרו דורשים הכרעה מול המקור העדכני</td></tr></tbody></table></div></div></section>
+  <section class="sheet courses-page true-table-page reveal">
+    <div class="sheet-inner wide">
+      <p class="eyebrow">פיתוח מקצועי · תשפ״ז</p>
+      <h2>טבלת השתלמויות — מיומנויות, קישורים ואימות</h2>
+      <div class="training-wrap">
+        <table class="training-table true-training-table">
+          <thead><tr><th>שם ההשתלמות</th><th>כישורים / מיומנויות</th><th>סילבוס</th></tr></thead>
+          <tbody>
+            <tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>הובלה פדגוגית, ניהול ידע בצוות, שיתוף מקצועי ותכנון עבודת הרכז</td><td><a href="https://drive.google.com/file/d/1QHYojSXEUtFHHtRDhhAb9guiXE4tF-oR/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td></tr>
+            <tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>פדגוגיה דיגיטלית, שילוב בינה מלאכותית, ניהול מרחב Moodle, בניית משימות והטמעת עדכון ת״ל</td><td><a href="https://drive.google.com/file/d/1MPTDPrM6no1dOwKkayU4RSEpfFDbijTH/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td></tr>
+            <tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>הוראה דיפרנציאלית, התאמת משימות, איתור קושי, תיווך מתמטי ותמיכה בתלמידי חנ״מ</td><td><a href="https://drive.google.com/file/d/1aVlPA5UMQfbSIAmPs0bhoCsPJ86VStGe/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td></tr>
+            <tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>חשיבה אלגברית, הנמקה מתמטית, הוראה מרצף שש־שנתי, הערכה, למידה מטעויות וכלים דיגיטליים בגאומטריה</td><td><a href="https://drive.google.com/file/d/14ybA9ao125SbMv4yqwa_u0inSpCcMQh-/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td></tr>
+            <tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>המחשה גאומטרית, ויזואליזציה מרחבית, מודל פיזי, מעבר מקונקרטי לפורמלי והנמקה גאומטרית</td><td><a href="https://drive.google.com/file/d/1FTEh4Lt5sBqd1kHF_riunRx6m4IjdxlS/view" target="_blank" rel="noopener noreferrer">פתיחת סילבוס</a></td></tr>
+            <tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>מוטיבציה ללמידה, קוגניציה, חשיבה מתמטית, קבלת החלטות ופתרון בעיות</td><td><a href="https://docs.google.com/document/d/1-FTftCvxTF0v1HiR4p8eUg464LUVHlfU3dd_-kuCbB4/edit" target="_blank" rel="noopener noreferrer">פתיחת מסמך הסילבוס</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
+  <section class="sheet courses-page true-table-page reveal">
+    <div class="sheet-inner wide">
+      <p class="eyebrow">פיתוח מקצועי · תשפ״ז</p>
+      <h2>טבלת השתלמויות — מיומנויות, קישורים ואימות</h2>
+      <div class="training-wrap">
+        <table class="training-table true-training-table">
+          <thead><tr><th>שם ההשתלמות</th><th>הרשמה</th><th>סטטוס אימות</th></tr></thead>
+          <tbody>
+            <tr><td><strong>קהילת רכזי מתמטיקה</strong></td><td>לא אומת קישור ישיר</td><td>מצפן וסילבוס אומתו; לוח המחזור דורש אימות</td></tr>
+            <tr><td><strong>בינה מלאכותית ו־Moodle בהוראת המתמטיקה ז׳–ח׳ — יישום עדכון ת״ל</strong></td><td>לא אומת קישור ישיר</td><td>מצפן, סילבוס ומפגש פתיחה זוהו; יתר המועדים בהצלבה</td></tr>
+            <tr><td><strong>הוראת התלמיד המתקשה בכיתתו וחנ״מ</strong></td><td>לא אומת קישור ישיר</td><td>מצפן וסילבוס אומתו; פרטי מנחה/היקף דורשים אימות</td></tr>
+            <tr><td><strong>הוראת המתמטיקה בכיתות ט׳ — בדגש לקראת 4 ו־5 יח״ל</strong></td><td>לא אומת קישור ישיר</td><td>מועד, שעות, היקף, מנחים וסילבוס אומתו במקור</td></tr>
+            <tr><td><strong>גיאומטריה מהשטח — מהמחשה פיזית להבנה מתמטית</strong></td><td>לא אומת קישור ישיר</td><td>המספר מופיע במקור המאוחר; בעלון הישן הופיע „בקרוב” — נדרש אימות גרסה עדכנית</td></tr>
+            <tr class="verification-row"><td><strong>עדכון תוכנית הלימודים / מוטיבציה ומתמטיקה — שם טעון הכרעה</strong></td><td>לא אומת קישור ישיר</td><td><strong>CONFLICT / VERIFY</strong> — שם הקורס ומספרו דורשים הכרעה מול המקור העדכני</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet calendar-page" id="calendar"><div class="sheet-inner"><p class="eyebrow">שומרים ביומן</p><h2>מה צפוי?</h2><div class="event-list"><article><time>20.10.2026</time><div><strong>השתלמות שכבת ט׳</strong><span>19:00–21:30</span></div></article><article><time>21.10.2026</time><div><strong>קהילת מורים</strong><span>19:00–21:30</span></div></article><article><time>25.10–06.11</time><div><strong>שכבת ח׳ — משימת הערכה במודל: ״ציור קיר״</strong><span>יחס, פרופורציה וקנה מידה</span></div></article><article><time>28.10.2026</time><div><strong>יום עיון מחוזי</strong><span>14:30–19:00 · מצפן 203587</span></div></article><article><time>01.11–13.11</time><div><strong>שכבת ז׳ — משימת הערכה במודל: ״גיימינג־אפ״</strong><span>מערכת הצירים</span></div></article><article><time>10.11.2026</time><div><strong>השתלמות שכבת ט׳</strong><span>19:00–21:30</span></div></article><article><time>17.11.2026</time><div><strong>כנס רכזים</strong><span>14:30–19:00 · פסג״ה מודיעין</span><p class="event-register-note">למי שעדיין לא נרשם: יש למלא את טופס ההרשמה, ובנוסף להירשם גם במצפן.</p><a class="event-register-link" href="https://forms.gle/gj1cjouKDD5cD3WdA" target="_blank" rel="noopener noreferrer">הרשמה לכנס</a></div></article><article><time>24.11.2026</time><div><strong>השתלמות שכבת ט׳</strong><span>19:00–21:30</span></div></article><article><time>25.11.2026</time><div><strong>מבחן תנופה</strong></div></article></div></div></section>
+  <!-- ===== מה צפוי? ===== -->
+  <section class="sheet calendar-page reveal" id="calendar">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner">
+      <p class="eyebrow">שומרים ביומן</p>
+      <h2>מה צפוי?</h2>
+      <div class="event-list">
+        <article><time>20.10.2026</time><div><strong>השתלמות שכבת ט׳</strong><span>19:00–21:30</span></div></article>
+        <article><time>21.10.2026</time><div><strong>קהילת מורים</strong><span>19:00–21:30</span></div></article>
+        <article><time>25.10–06.11</time><div><strong>שכבת ח׳ — משימת הערכה במודל: ״ציור קיר״</strong><span>יחס, פרופורציה וקנה מידה</span></div></article>
+        <article><time>28.10.2026</time><div><strong>יום עיון מחוזי</strong><span>14:30–19:00 · מצפן 203587</span></div></article>
+        <article><time>01.11–13.11</time><div><strong>שכבת ז׳ — משימת הערכה במודל: ״גיימינג־אפ״</strong><span>מערכת הצירים</span></div></article>
+        <article><time>10.11.2026</time><div><strong>השתלמות שכבת ט׳</strong><span>19:00–21:30</span></div></article>
+        <article><time>17.11.2026</time><div><strong>כנס רכזים</strong><span>14:30–19:00 · פסג״ה מודיעין</span><p class="event-register-note">למי שעדיין לא נרשם: יש למלא את טופס ההרשמה, ובנוסף להירשם גם במצפן.</p><a class="event-register-link" href="https://forms.gle/gj1cjouKDD5cD3WdA" target="_blank" rel="noopener noreferrer">הרשמה לכנס</a></div></article>
+        <article><time>24.11.2026</time><div><strong>השתלמות שכבת ט׳</strong><span>19:00–21:30</span></div></article>
+        <article><time>25.11.2026</time><div><strong>מבחן תנופה</strong></div></article>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet moodle-page" id="moodle">
+  <!-- ===== Moodle ===== -->
+  <section class="sheet moodle-page reveal" id="moodle">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
     <div class="sheet-inner">
       <p class="eyebrow">Moodle · משימות לאורך שנת הלימודים</p>
       <h2>משימות חובה ומשימות הערכה — מה חשוב לדעת?</h2>
@@ -88,11 +313,88 @@
     </div>
   </section>
 
-  <section class="sheet workbooks-page" id="workbooks"><div class="sheet-inner"><p class="eyebrow">חומרי הוראה</p><h2>חוברות העבודה שלנו</h2><div class="workbook-grid"><a href="https://yanivmizrachiy.github.io/ratio-workbook/" target="_blank" rel="noopener noreferrer"><strong>יחס ופרופורציה</strong><span>פתיחת החוברת</span></a><a href="https://yanivmizrachiy.github.io/graph-reading-preview/" target="_blank" rel="noopener noreferrer"><strong>קריאת גרפים</strong><span>פתיחת החוברת</span></a><a href="https://yanivmizrachiy.github.io/pythagoras/" target="_blank" rel="noopener noreferrer"><strong>משפט פיתגורס</strong><span>פתיחת החוברת</span></a><a href="https://zaviyot.vercel.app" target="_blank" rel="noopener noreferrer"><strong>זוויות</strong><span>פתיחת החוברת</span></a><a href="https://galil-new.vercel.app" target="_blank" rel="noopener noreferrer"><strong>גליל</strong><span>פתיחת החוברת</span></a><a href="https://yanivmizrachiy.github.io/harut/" target="_blank" rel="noopener noreferrer"><strong>חרוט</strong><span>פתיחת החוברת</span></a><a href="https://yanivmizrachiy.github.io/coordinate-first-quadrant/hoveret.pdf" target="_blank" rel="noopener noreferrer"><strong>מערכת הצירים ברביע הראשון</strong><span>פתיחת החוברת</span></a><a href="https://yanivmizrachiy.github.io/circle-to-cylinder/" target="_blank" rel="noopener noreferrer"><strong>מעגל, גליל וחרוט</strong><span>פתיחת החוברת</span></a></div></div></section>
+  <!-- ===== חוברות העבודה ===== -->
+  <section class="sheet workbooks-page reveal" id="workbooks">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner">
+      <p class="eyebrow">חומרי הוראה</p>
+      <h2>חוברות העבודה שלנו</h2>
+      <div class="workbook-grid">
+        <a href="https://yanivmizrachiy.github.io/ratio-workbook/" target="_blank" rel="noopener noreferrer"><strong>יחס ופרופורציה</strong><span>פתיחת החוברת</span></a>
+        <a href="https://yanivmizrachiy.github.io/graph-reading-preview/" target="_blank" rel="noopener noreferrer"><strong>קריאת גרפים</strong><span>פתיחת החוברת</span></a>
+        <a href="https://yanivmizrachiy.github.io/pythagoras/" target="_blank" rel="noopener noreferrer"><strong>משפט פיתגורס</strong><span>פתיחת החוברת</span></a>
+        <a href="https://zaviyot.vercel.app" target="_blank" rel="noopener noreferrer"><strong>זוויות</strong><span>פתיחת החוברת</span></a>
+        <a href="https://galil-new.vercel.app" target="_blank" rel="noopener noreferrer"><strong>גליל</strong><span>פתיחת החוברת</span></a>
+        <a href="https://yanivmizrachiy.github.io/harut/" target="_blank" rel="noopener noreferrer"><strong>חרוט</strong><span>פתיחת החוברת</span></a>
+        <a href="https://yanivmizrachiy.github.io/coordinate-first-quadrant/hoveret.pdf" target="_blank" rel="noopener noreferrer"><strong>מערכת הצירים ברביע הראשון</strong><span>פתיחת החוברת</span></a>
+        <a href="https://yanivmizrachiy.github.io/circle-to-cylinder/" target="_blank" rel="noopener noreferrer"><strong>מעגל, גליל וחרוט</strong><span>פתיחת החוברת</span></a>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet links-page"><div class="sheet-inner"><p class="eyebrow">קישורים חשובים</p><h2>קישורים לחטיבת הביניים</h2><div class="important-links"><article><h3>קבוצת המורים</h3><p>קבוצת השיתוף של מורי המתמטיקה בחטיבות הביניים במחוז ירושלים והעיר ירושלים.</p><a href="https://chat.whatsapp.com/CPF2OIP4poo4qmBdwQy5bX?mode=wwt" target="_blank" rel="noopener noreferrer">הצטרפות לקבוצת WhatsApp</a></article><article><h3>שאלון למורים</h3><p>למורים שעדיין לא מילאו את השאלון.</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeV1YBaoT7XDslsbamt8EmwXUmEFGyTRrpUHJEV89YUopP1Ug/viewform" target="_blank" rel="noopener noreferrer">פתיחת שאלון המורים</a></article><article><h3>שאלון לרכזים</h3><p>לרכזים שעדיין לא מילאו את השאלון.</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSepbWel2xb9IYSp-mHGoa1Zvi0O-XBormYWmNX4-Dv-9dnGiw/viewform" target="_blank" rel="noopener noreferrer">פתיחת שאלון הרכזים</a></article></div></div></section>
+  <!-- ===== קישורים חשובים ===== -->
+  <section class="sheet links-page reveal">
+    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg><svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
+    <div class="sheet-inner">
+      <p class="eyebrow">קישורים חשובים</p>
+      <h2>קישורים לחטיבת הביניים</h2>
+      <div class="important-links">
+        <article><h3>קבוצת המורים</h3><p>קבוצת השיתוף של מורי המתמטיקה בחטיבות הביניים במחוז ירושלים והעיר ירושלים.</p><a href="https://chat.whatsapp.com/CPF2OIP4poo4qmBdwQy5bX?mode=wwt" target="_blank" rel="noopener noreferrer">הצטרפות לקבוצת WhatsApp</a></article>
+        <article><h3>שאלון למורים</h3><p>למורים שעדיין לא מילאו את השאלון.</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeV1YBaoT7XDslsbamt8EmwXUmEFGyTRrpUHJEV89YUopP1Ug/viewform" target="_blank" rel="noopener noreferrer">פתיחת שאלון המורים</a></article>
+        <article><h3>שאלון לרכזים</h3><p>לרכזים שעדיין לא מילאו את השאלון.</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSepbWel2xb9IYSp-mHGoa1Zvi0O-XBormYWmNX4-Dv-9dnGiw/viewform" target="_blank" rel="noopener noreferrer">פתיחת שאלון הרכזים</a></article>
+      </div>
+    </div>
+  </section>
 
-  <section class="sheet closing-page"><div class="closing-inner"><img src="assets/logo.png" alt="לוגו מחוז ירושלים" class="closing-logo"><h2>שבת שלום</h2><p>בברכה,<br><strong>יניב רז</strong><br>הדרכה במתמטיקה · מחוז ירושלים</p><img src="assets/signature.svg" alt="חתימת יניב רז" class="signature"></div></section>
+  <!-- ===== מזל טוב — ברכת יום הולדת לאיילת קריספין ===== -->
+  <section class="sheet birthday-page reveal" id="birthday" aria-label="ברכת יום הולדת">
+    <svg class="bow bow-1" viewBox="0 0 120 90" aria-hidden="true"><use href="#bow"/></svg>
+    <svg class="bow bow-2" viewBox="0 0 120 90" aria-hidden="true"><use href="#bow"/></svg>
+    <svg class="bow bow-3" viewBox="0 0 120 90" aria-hidden="true"><use href="#bow"/></svg>
+    <svg class="bow bow-4" viewBox="0 0 120 90" aria-hidden="true"><use href="#bow"/></svg>
+    <div class="birthday-inner">
+      <h2>מזל טוב</h2>
+      <p class="birthday-lead">צוות ההדרכה מברך את <strong>איילת קריספין היקרה</strong> בשפע ברכות ואיחולים לרגל יום הולדתה.</p>
+      <p class="birthday-wish">מאחלים לך להמשיך להצעיד, להוביל ולהוות השראה בדרך של מצוינות, עשייה ומשמעות, עוד שנים רבות של בריאות, שמחה, הצלחה והגשמה.</p>
+    </div>
+  </section>
+
+  <!-- ===== Closing ===== -->
+  <section class="sheet closing-page reveal">
+    <div class="closing-inner">
+      <img src="assets/logo.png" alt="לוגו מחוז ירושלים" class="closing-logo">
+      <h2>שבת שלום</h2>
+      <p>בברכה,<br><strong>יניב רז</strong><br>הדרכה במתמטיקה · מחוז ירושלים</p>
+      <img src="assets/signature.svg" alt="חתימת יניב רז" class="signature">
+    </div>
+  </section>
+
 </main>
+
+<!-- ===== Motion: reading progress + reveal-on-scroll (pages stay visible without JS) ===== -->
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+
+  /* gold progress line in the masthead */
+  var bar=document.getElementById('progress-bar');
+  function progress(){
+    var h=root.scrollHeight-root.clientHeight;
+    bar.style.width=(h>0?Math.min(100,100*root.scrollTop/h):0)+'%';
+  }
+  addEventListener('scroll',progress,{passive:true});
+  addEventListener('resize',progress);
+  progress();
+
+  /* reveal each page as it enters the viewport */
+  var pages=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){pages.forEach(function(p){p.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  pages.forEach(function(p){io.observe(p)});
+})();
+</script>
 </body>
 </html>
