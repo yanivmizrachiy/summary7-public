@@ -437,6 +437,9 @@ a:focus-visible{outline:3px solid var(--royal-2);outline-offset:3px}
 .task-list h3::before{content:"";flex:none;width:10px;height:10px;margin-top:9px;border-radius:50%;background:linear-gradient(135deg,var(--gold-2),var(--gold-3));box-shadow:0 0 0 3px rgba(201,162,79,.2)}
 .task-list p{font-size:15px;line-height:1.75}
 .task-list p strong{color:var(--royal)}
+.task-list .link-row{margin-top:6px}
+.moodle-reminder{font-size:15px;line-height:1.75;padding:14px 16px;border-radius:14px;background:#fff3ee;border-right:3px solid var(--verify);color:#5a2a1a}
+.moodle-reminder strong{color:var(--verify)}
 
 /* ============================================================
    חוברות העבודה
