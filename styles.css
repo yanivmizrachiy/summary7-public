@@ -35,20 +35,20 @@ nav.quick{display:none!important}section{margin-top:8mm;break-inside:auto}sectio
 .cards a,.panel{box-shadow:none!important;background:#fff!important;border:1px solid #a9b7c3;break-inside:avoid;padding:10px}#moodle{background:#fff;padding:10px;break-inside:avoid}.grades{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.grades .panel{padding:10px}.grades h3{font-size:14pt}.grades h4{margin-top:8px}a{color:#173e5f!important;text-decoration:underline}footer{margin-top:10mm}}
 
 /* Per-topic section colors (luxurious, harmonious with navy/gold; AA-safe on dark ink) + full phone fit — Claude Code 2026-10-16 */
-#courses,#news,#calendar,#moodle,#workbooks,#teaching{margin-top:30px;padding:28px clamp(18px,3.5vw,34px) 32px;border-radius:18px;border:1px solid transparent;box-shadow:0 6px 24px #18334d0a;position:relative;overflow:hidden}
-#courses:before,#news:before,#calendar:before,#moodle:before,#workbooks:before,#teaching:before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:5px}
+#courses,#news,#calendar,#moodle,#workbooks{margin-top:30px;padding:28px clamp(18px,3.5vw,34px) 32px;border-radius:18px;border:1px solid transparent;box-shadow:0 6px 24px #18334d0a;position:relative;overflow:hidden}
+#courses:before,#news:before,#calendar:before,#moodle:before,#workbooks:before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:5px}
 #courses{background-color:#eef4fb;border-color:#d4e3f2}#courses:before{background:#2f6aa6}#courses h2:before{background:#2f6aa6}
 #news{background-color:#eaf6ef;border-color:#cfe8da}#news:before{background:#2e8b6b}#news h2:before{background:#2e8b6b}
 #calendar{background-color:#f8f3e7;border-color:#ecdcbe}#calendar:before{background:#b5852f}#calendar h2:before{background:#b5852f}
 #moodle{background-color:#eef0f8;border-color:#d8dbef}#moodle:before{background:#4b5b9c}#moodle h2:before{background:#4b5b9c}
 #workbooks{background-color:#f3eefb;border-color:#e3d7f1}#workbooks:before{background:#7a53a8}#workbooks h2:before{background:#7a53a8}
-#teaching{background-color:#e9f4f6;border-color:#cfe6ea}#teaching:before{background:#2b7d8c}#teaching h2:before{background:#2b7d8c}
+
 /* phones — iPhone/Android, all sizes incl. notch (safe-area) + small 320px + comfortable tap targets */
-@media(max-width:700px){#courses,#news,#calendar,#moodle,#workbooks,#teaching{margin-top:22px;padding:19px 16px 21px;border-radius:14px}main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right));padding-bottom:max(38px,env(safe-area-inset-bottom))}
+@media(max-width:700px){#courses,#news,#calendar,#moodle,#workbooks{margin-top:22px;padding:19px 16px 21px;border-radius:14px}main{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right));padding-bottom:max(38px,env(safe-area-inset-bottom))}
 nav.quick a{padding:10px 14px}
 }
-@media(max-width:360px){main{padding-left:max(11px,env(safe-area-inset-left));padding-right:max(11px,env(safe-area-inset-right))}#courses,#news,#calendar,#moodle,#workbooks,#teaching{padding:16px 13px 18px}}
-@media print{#courses,#news,#calendar,#moodle,#workbooks,#teaching{background:#fff!important;border:0;box-shadow:none;padding:0;margin-top:18px}#courses:before,#news:before,#calendar:before,#moodle:before,#workbooks:before,#teaching:before{display:none}}
+@media(max-width:360px){main{padding-left:max(11px,env(safe-area-inset-left));padding-right:max(11px,env(safe-area-inset-right))}#courses,#news,#calendar,#moodle,#workbooks{padding:16px 13px 18px}}
+@media print{#courses,#news,#calendar,#moodle,#workbooks{background:#fff!important;border:0;box-shadow:none;padding:0;margin-top:18px}#courses:before,#news:before,#calendar:before,#moodle:before,#workbooks:before{display:none}}
 /* "מה צפוי" as a refined table with delicate borders */
 .cal-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
 .cal-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #ead9b8;border-radius:12px;overflow:hidden;font-size:15px}
@@ -56,7 +56,7 @@ nav.quick a{padding:10px 14px}
 .cal-table thead th{background:#f3ead3;color:#7a5a1f;font-size:13px;letter-spacing:.02em;font-weight:800;border-bottom:2px solid #e3cfa4}
 .cal-table tbody tr:last-child td{border-bottom:0}
 .cal-table tbody tr:nth-child(even){background:#fdfaf2}
-.cal-table .cal-date{font-weight:800;color:#22577f;white-space:nowrap}
+.cal-table .cal-date{font-weight:800;color:#22577f;font-variant-numeric:tabular-nums;white-space:normal;line-height:1.65}
 .cal-table .cal-time{color:#6b7a86;white-space:nowrap;font-variant-numeric:tabular-nums}
 @media(max-width:700px){.cal-table{font-size:14px}.cal-table th,.cal-table td{padding:9px 11px}}
 @media print{.cal-wrap{overflow:visible}.cal-table{border-color:#cbd5de}.cal-table thead th{background:#eef2f6}.cal-table tbody tr:nth-child(even){background:transparent}}
