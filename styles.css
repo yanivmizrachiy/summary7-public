@@ -130,3 +130,11 @@ a,p,span,strong,h1,h2,h3,h4,li,td,th{overflow-wrap:anywhere;word-break:break-wor
 /* grade-page-title-final */
 .grade-page-title{margin:0 0 18px;color:var(--blue);font:900 clamp(2rem,5vw,3.4rem)/1.05 "Frank Ruhl Libre",serif;letter-spacing:-.02em}
 @media(max-width:720px){.grade-page-title{margin:0 0 14px;font-size:2rem;line-height:1.08}}
+
+
+/* training-a4-pages-final */
+.courses-page-part{overflow:hidden!important}
+.courses-page-part .sheet-inner{padding-top:10px!important}
+@media(max-width:720px){.courses-page-part{overflow:visible!important;min-height:auto!important}.courses-page-part .training-table td{grid-template-columns:minmax(0,34%) minmax(0,1fr)!important}}
+@media(max-width:390px){.courses-page-part .training-table td{grid-template-columns:1fr!important}}
+@media print{.courses-page-part{break-after:page;page-break-after:always;overflow:visible!important}}
