@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - '.github/workflows/premium-polish.yml'
+      - 'tools/polish_summary7.py'
+      - 'tools/light_cover.py'
 
 permissions:
   contents: write
@@ -18,6 +20,9 @@ jobs:
       - name: Apply premium design system
         run: python3 tools/polish_summary7.py
 
+      - name: Apply light luxury cover
+        run: python3 tools/light_cover.py
+
       - name: Commit polished site
         run: |
           git config user.name "github-actions[bot]"
@@ -26,6 +31,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes needed"
           else
-            git commit -m "Deep premium polish for Summary 7"
+            git commit -m "Light luxury cover for Summary 7"
             git push
           fi
