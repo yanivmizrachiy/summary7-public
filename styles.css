@@ -25,6 +25,7 @@
   --gold-3:#8f6a22;
 
   /* ---- Brand & section accents ---- */
+  --district-blue:#2196F3; /* the district site's title-rule blue (jerusalem2 --pal-blue) */
   --royal:#1a27ad;        /* the logo's blue */
   --royal-2:#2f44d6;
   --emerald:#0f8a6b;
@@ -50,6 +51,11 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+/* Scrollbar in the district site's title-rule blue (owner 20/10/2026): the document is
+   embedded on /hodaot/, so its scrollbar reads as part of that page's blue title line. */
+html{scrollbar-color:var(--district-blue) transparent}
+html::-webkit-scrollbar{width:12px;background:transparent}
+html::-webkit-scrollbar-thumb{background:var(--district-blue);border-radius:999px;border:3px solid transparent;background-clip:padding-box}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0;
@@ -191,12 +197,16 @@ a:focus-visible{outline:3px solid var(--royal-2);outline-offset:3px}
 }
 .cover::after{display:none}
 .cover-inner{position:relative;z-index:3;padding:clamp(28px,7vw,52px) var(--gutter) clamp(34px,8vw,56px);display:grid;justify-items:center;text-align:center;gap:18px}
+/* Cover date row (owner 20/10/2026): Hebrew date/day sits at the right edge, the civil
+   date is pushed flush to the LEFT edge of the gold rule. The span is dir="ltr", so its
+   logical sides are flipped — the physical margin-right:auto is what absorbs the free
+   space on its right and keeps it at the line's left end, also when the row wraps. */
 .date-row{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;width:100%;
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;gap:8px 18px;width:100%;
   font-family:var(--f-label);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-3);
   padding-bottom:14px;border-bottom:1px solid rgba(201,162,79,.45);
 }
-.date-row span[dir="ltr"]{font-family:var(--f-num);font-size:18px;letter-spacing:.12em;font-weight:700;color:var(--ink)}
+.date-row span[dir="ltr"]{order:2;margin-right:auto;font-family:var(--f-num);font-size:18px;letter-spacing:.12em;font-weight:700;color:var(--ink)}
 
 .logo-ring{position:relative;width:min(58vw,210px);aspect-ratio:1;display:grid;place-items:center;margin-top:6px}
 .logo-ring img{width:78%;border-radius:50%;box-shadow:0 0 0 6px #fff,0 24px 44px -20px rgba(18,23,52,.45);position:relative;z-index:2;animation:float 7s ease-in-out infinite}
