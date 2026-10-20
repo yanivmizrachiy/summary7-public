@@ -429,7 +429,6 @@ html.dlg-open{overflow:hidden}
    טבלאות השתלמויות — real tables, no horizontal scroll
    ============================================================ */
 .courses-page{--a:var(--gold-3);--a-soft:rgba(201,162,79,.14)}
-.training-note{font-size:13.5px;line-height:1.65;color:var(--muted);margin:-6px 0 16px;padding:10px 14px;border-radius:12px;background:var(--paper-2);border-right:3px solid var(--gold)}
 .training-wrap{width:100%;max-width:100%}
 .training-table{
   width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;
@@ -457,16 +456,10 @@ html.dlg-open{overflow:hidden}
 .training-table td a:hover{border-bottom-color:var(--royal)}
 .training-table .compass{display:block;margin-top:6px;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.02em}
 .training-table .compass b[dir="ltr"]{font-size:14px;letter-spacing:.02em}
-.training-table.cols-id th,.training-table.cols-id td{padding:12px 8px}
-.training-table.cols-id th:nth-child(1),.training-table.cols-id td:nth-child(1){width:46%}
-.training-table.cols-id th:nth-child(2),.training-table.cols-id td:nth-child(2){width:26%}
-.training-table.cols-id th:nth-child(3),.training-table.cols-id td:nth-child(3){width:28%}
-.training-table.cols-id td b[dir="ltr"]{font-size:16px}
 @media (max-width:360px){
   .training-table{font-size:12.5px}
   .training-table th,.training-table td{padding:10px 7px}
-  .training-table.cols-id th,.training-table.cols-id td{padding:10px 6px}
-  .training-table td b[dir="ltr"],.training-table.cols-id td b[dir="ltr"]{font-size:14px;letter-spacing:0}
+  .training-table td b[dir="ltr"]{font-size:14px;letter-spacing:0}
   .training-table .compass b[dir="ltr"]{font-size:13px}
 }
 
