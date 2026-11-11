@@ -182,7 +182,7 @@ const chapterPicker=document.getElementById("jump");
 // כותרות פרקי החוברת נגזרות מהדפים עצמם: אין רשימה כפולה או מקור תוכן שני.
 pages.forEach((page,i)=>{
  const heading=page.querySelector("h1,h2");
- const label=(heading?.textContent||"עמוד").replace(/\s+/g," ").trim();
+ const label=(heading?.innerHTML||"עמוד").replace(/<br\s*\/?\s*>/gi," ").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
  const option=document.createElement("option");
  option.value=String(i);
  option.textContent=(i+1)+". "+label;
