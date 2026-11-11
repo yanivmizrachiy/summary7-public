@@ -133,6 +133,60 @@ main{display:grid;place-items:start center;padding:clamp(14px,3vw,28px) 12px 135
  .chapter-picker{min-width:106px;max-width:180px}
 }
 
+
+/* עיצוב Journal A4: דף לבן ממש, טיפוגרפיה צבעונית, דפדוף רך. */
+body{background:#eff3f8}
+main{perspective:1600px}
+.paper{
+ background:#fff;border:1px solid #e3e9f2;border-radius:5px;
+ box-shadow:0 20px 50px -23px #263b6155,0 2px 9px #263b6114;
+ transform-style:preserve-3d;
+}
+.paper:before{
+ inset:0 auto 0 0;width:5px;border:0;border-image:none;opacity:1;
+ background:linear-gradient(180deg,#8150d7 0%,#36b7c7 52%,#efb34b 100%);
+}
+.paper:after{display:none}
+.cover{background:#fff}
+.cover-center{
+ background:#fff;border:1px solid #e5e9f3;border-radius:20px;
+ box-shadow:none;padding:46px 25px 43px;
+}
+.cover-center:before{display:none}
+.cover-center .overline{color:#067d91}
+.cover-center h1{color:#183156;text-shadow:none}
+.cover-center h1 em{color:#763cbd;text-shadow:none}
+.cover-center>p{color:#31465e}
+.cover-center .rule{background:linear-gradient(90deg,#7541c7,#19a4c2,#edaa48);box-shadow:none}
+.cover-center .cover-grades span{background:#f2eafa;color:#6731a7;border:1px solid #e3d1f2}
+.cover-center .cover-grades span+span{background:#eaf9f7;color:#076e78;border:1px solid #cfece9}
+.page-head h2{color:#6836ad}
+.paper.teal .page-head h2{color:#087b89}
+.paper.closing .page-head h2{color:#234d9a}
+.intro-card,.teal-card,.note-block,.assessment.first,.teal .assessment.first,.source-box{
+ background:#fff;
+}
+.intro-card{border-color:#e7d7f0}
+.teal-card{border-color:#d0eae9}
+.note-block{border:1px solid #f1e2bb;border-right:4px solid #db9d30}
+.source-box{border:1px solid #e3eaf3}
+.task-table tbody tr:nth-child(even){background:#f8fbff}
+.page-footnote{background:#fff;border-right-color:#d8a446}
+.page-tail{color:#64758c}
+.paper[data-turn="forward"]{animation:journalForward .34s cubic-bezier(.2,.75,.2,1) both}
+.paper[data-turn="backward"]{animation:journalBackward .34s cubic-bezier(.2,.75,.2,1) both}
+@keyframes journalForward{from{opacity:.75;transform:translateX(16px) rotateY(-5deg)}to{opacity:1;transform:translateX(0) rotateY(0)}}
+@keyframes journalBackward{from{opacity:.75;transform:translateX(-16px) rotateY(5deg)}to{opacity:1;transform:translateX(0) rotateY(0)}}
+@media(max-width:520px){
+ .paper{border-radius:3px}
+ .cover-center{border-radius:15px;padding:35px 15px}
+ .cover-center h1{font-size:clamp(32px,8.6vw,48px)}
+}
+@media print{
+ .paper:before{display:none!important}
+ .paper{border:none!important}
+}
+
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:0s!important;transition-duration:0s!important}}
 @page{size:A4 portrait;margin:0}
 @media print{
@@ -189,8 +243,8 @@ pages.forEach((page,i)=>{
  chapterPicker.appendChild(option);
 });
 let active=0;
-function setPage(index){if(!Number.isInteger(index))return;active=Math.max(0,Math.min(pages.length-1,index));
-pages.forEach((p,i)=>{p.hidden=i!==active;p.setAttribute("aria-hidden",i!==active?"true":"false")});
+function setPage(index){if(!Number.isInteger(index))return;const last=active;active=Math.max(0,Math.min(pages.length-1,index));
+pages.forEach((p,i)=>{p.hidden=i!==active;p.setAttribute("aria-hidden",i!==active?"true":"false");if(i===active)p.dataset.turn=active>=last?"forward":"backward";});
 previous.disabled=active===0;next.disabled=active===pages.length-1;
 count.textContent=(active+1)+" / "+pages.length;chapterPicker.value=String(active);progress.style.width=((active+1)/pages.length*100)+"%";
 history.replaceState(null,"","#page-"+(active+1));window.scrollTo({top:0,behavior:"instant"});}
